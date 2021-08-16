@@ -44,10 +44,11 @@ const drawLine = (context, x1, y1, x2, y2) => {
 canvas.addEventListener("mousedown", (e) => {
   getXPosition = e.offsetX;
   getYPosition = e.offsetY;
+  drawLine(context, getXPosition, getYPosition, e.offsetX, e.offsetY);
   drawing = true;
 });
 canvas.addEventListener("mousemove", (e) => {
-  if (drawing === true) {
+  if (drawing) {
     drawLine(context, getXPosition, getYPosition, e.offsetX, e.offsetY);
     getXPosition = e.offsetX;
     getYPosition = e.offsetY;
