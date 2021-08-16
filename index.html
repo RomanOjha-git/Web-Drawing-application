@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Risque&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="" href="CSS/style.css" />
+    <title>Draw</title>
+  </head>
+  <body onresize="windowResize()">
+    <div class="main_body_container" >
+      <div class="navigation_container">
+        <h1 id="draw_font">Draw</h1>
+        <div class="color_picker_container">
+          <div class="color_outline" style="border: 2px solid black">
+            <div class="color" onclick="selectColor(event)" style="background-color: black;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: #6c6c6c;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: #d01313;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: #922E2E;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: #E8F278;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: #4057D3;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: #8AE76A;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: #17B23A;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: #BB28BE;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: #1BD3EC;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: #E04C8A;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: #312676;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: #FAC746;"></div>
+          </div>
+          <div class="color_outline" style="border: 2px solid transparent">
+            <div class="color" onclick="selectColor(event)" style="background-color: white;"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="drawing_container">
+        <canvas class="canvas" ></canvas>
+      </div>
+    </div>
+    <script src="Javascript/script.js"></script>
+  </body>
+</html>
