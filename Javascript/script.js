@@ -1,3 +1,13 @@
+let penSize = 1;
+// Pen Picker Logic------------------------------------
+let previousPen = document.getElementsByClassName("chose_pen_outline_inner")[0];
+function selectPen(event) {
+  penSize = event.target.id;
+  previousPen.style.boxShadow = "0px 0px 10px rgb(148, 147, 147)";
+  event.target.parentElement.style.boxShadow = "0px 0px 10px rgb(77, 77, 77)";
+  previousPen = event.target.parentElement;
+}
+
 // Color Picker logic----------------------------------
 let previousColor = document.getElementsByClassName("color_outline")[0];
 let color;
@@ -16,7 +26,7 @@ totalWidth = canvasContainer.clientWidth;
 totalHeight = canvasContainer.clientHeight;
 canvas.setAttribute("width", `${totalWidth}`);
 canvas.setAttribute("height", `${totalHeight}`);
-function windowResize() {
+function windowRepenSize() {
   let totalWidth = canvasContainer.clientWidth;
   let totalHeight = canvasContainer.clientHeight;
   canvas.setAttribute("width", `${totalWidth}`);
@@ -25,20 +35,19 @@ function windowResize() {
 let getXPosition;
 let getYPosition;
 let drawing = false;
-document.body.addEventListener("resize", () => {
+document.body.addEventListener("repenSize", () => {
   console.log("change");
 });
 
-let size = 5;
 const drawLine = (context, x1, y1, x2, y2) => {
   context.beginPath();
   context.strokeStyle = color;
-  context.lineWidth = size;
+  context.lineWidth = penSize;
   context.moveTo(x1, y1);
   context.lineTo(x2, y2);
   context.stroke();
   context.closePath();
-  //   context.arc(x1, y1, size, 0, 2 * Math.PI);
+  //   context.arc(x1, y1, penSize, 0, 2 * Math.PI);
   //   context.fill();
 };
 canvas.addEventListener("mousedown", (e) => {
